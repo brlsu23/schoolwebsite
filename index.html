@@ -1,0 +1,154 @@
+
+desing and code the school  website
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataKent Koleji | Resmi Web Sitesi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="header-inner">
+            <div class="top-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="top-links">
+                <span>Öğrenci Kayıt Başvurusu</span>
+                <span class="separator">|</span>
+                <span>Türkçe / English</span>
+                <span class="separator">|</span>
+                <span class="contact-item"><i class="fas fa-envelope"></i> golbasi@datakentegitimkurumlari.com</span>
+            </div>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="header-inner">
+            <div class="logo">
+                <a href="index.html"><img src="data-kent-logo.png" class="small-article-logo" alt="DataKent Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#">Kurumsal <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+                           <li><a href="genelmudur.html">GENEL MÜDÜR MESAJI</a></li>
+                            <li><a href="misyon.html">Misyon & Vizyon</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">DataKent Koleji <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Gölbaşı Kampüsü</a></li>
+                            <li><a href="#">Keçiören Kampüsü</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Projeler</a></li>
+                    <li><a href="#">Haberler/Duyurular</a></li>
+                    <li><a href="#">Başvuru/İletişim</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="btn-gold-action">BİLGİ ALIN</button>
+                <div class="ata-wrapper">
+                    <img src="ataturk-bayrak.png" alt="Mustafa Kemal Atatürk" class="ata-img">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-modern">
+        <div class="slider-wrapper" id="mainSlider">
+            <div class="hero-slide">
+                <div class="hero-overlay">
+                    <div class="hero-content">
+
+                        <h1>Geleceğinizi Şekillendirin</h1>
+                        <p>2026 Eğitim öğretim yılı başvurularımız devam ediyor.</p>
+                       <a href="basvuru.html" class="btn-gold-lg">BAŞVURU YAP</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide">
+                <div class="hero-overlay">
+                    <div class="hero-content">
+                        <div class="hero-badge">KAMPÜSLERİMİZ</div>
+                        <h1>Gölbaşı Kampüsü</h1>
+                        <p>Modern teknoloji ve geniş sosyal alanlar.</p>
+                        <a href="#" class="btn-gold-lg">KAMPÜSÜ KEŞFET</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide">
+                <div class="hero-overlay">
+                    <div class="hero-content">
+                        <div class="hero-badge">KAMPÜSLERİMİZ</div>
+                        <h1>Keçiören Kampüsü</h1>
+                        <p>Akademik başarının ve disiplinin adresi.</p>
+                        <a href="#" class="btn-gold-lg">DETAYLI BİLGİ</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide">
+                <div class="hero-overlay">
+                    <div class="hero-content">
+                        <div class="hero-badge">ETKİNLİKLER</div>
+                        <h1>Ziyaretlerimiz</h1>
+                        <p>Dünyayı keşfeden öğrencilerimizden kareler.</p>
+                        <a href="#" class="btn-gold-lg">GALERİYE GİT</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="nav-btn prev" onclick="moveSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+        <button class="nav-btn next" onclick="moveSlide(1)"><i class="fas fa-chevron-right"></i></button>
+    </section>
+
+    <section class="quick-access-section">
+        <div class="access-container">
+            <a href="#" class="access-card">
+                <div class="card-icon"><i class="fas fa-lightbulb"></i></div>
+                <h3>PROJELERİMİZ</h3>
+                <span class="card-link">Keşfet <i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="#" class="access-card">
+                <div class="card-icon"><i class="fas fa-university"></i></div>
+                <h3>KURUMSAL</h3>
+                <span class="card-link">İncele <i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="#" class="access-card">
+                <div class="card-icon"><i class="fas fa-user-graduate"></i></div>
+                <h3>DATAKENT PDR</h3>
+                <span class="card-link">Detaylar <i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="#" class="access-card">
+                <div class="card-icon"><i class="fas fa-question-circle"></i></div>
+                <h3>S.S.S</h3>
+                <span class="card-link">Göz At <i class="fas fa-arrow-right"></i></span>
+            </a>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 DataKent Koleji. Tüm hakları saklıdır.</p>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const wrapper = document.getElementById('mainSlider');
+        function moveSlide(direction) {
+            currentSlide = (currentSlide + direction + 4) % 4;
+            wrapper.style.transform = `translateX(-${currentSlide * 25}%)`;
+        }
+        setInterval(() => moveSlide(1), 5000);
+    </script>
+</body>
+</html>
