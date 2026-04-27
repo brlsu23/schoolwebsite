@@ -1,0 +1,839 @@
+/* =========================================
+   1. DEĞİŞKENLER VE GENEL AYARLAR
+   ========================================= */
+:root {
+    --primary-blue: #0b3c6d;     /* Kurumsal Lacivert */
+    --gold: #c9a74d;             /* Kurumsal Altın */
+    --gold-hover: #a8893c;
+    --dark-bg: #112131;         /* Top Bar Koyu Arka Plan */
+    --light-bg: #f4f7f9;
+    --white: #ffffff;
+    --transition: all 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--light-bg);
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden; /* Kayma efekti için şart */
+}
+
+/* =========================================
+   2. TOP BAR (ÜST BİLGİ ŞERİDİ)
+   ========================================= */
+.top-bar {
+    background-color: var(--dark-bg);
+    color: var(--white);
+    padding: 8px 0;
+    font-size: 12px;
+}
+
+.top-bar .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.top-social a {
+    color: var(--white);
+    margin-right: 15px;
+    transition: var(--transition);
+}
+
+.top-social a:hover {
+    color: var(--gold);
+}
+
+.contact-item i {
+    color: var(--gold);
+    margin-right: 5px;
+}
+
+/* =========================================
+   3. ANA HEADER VE NAVİGASYON
+   ========================================= */
+.main-header {
+    background: var(--white);
+    padding: 10px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-header .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.logo img {
+    height: 80px;
+    display: block;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--primary-blue);
+    font-weight: 700;
+    font-size: 13px;
+    text-transform: uppercase;
+    transition: var(--transition);
+}
+
+nav ul li a:hover {
+    color: var(--gold);
+}
+
+/* Dropdown Menü Tasarımı */
+.dropdown {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background: var(--white);
+    min-width: 210px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 10px 0;
+    z-index: 1000;
+    animation: menuFade 0.3s ease-out;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+@keyframes menuFade {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-menu li { width: 100%; }
+.dropdown-menu li a {
+    padding: 12px 20px;
+    text-transform: none;
+    font-weight: 500;
+    display: block;
+}
+
+/* =========================================
+   4. AKSİYON BUTONLARI VE ATATÜRK ALANI
+   ========================================= */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-gold-action {
+    background: var(--gold);
+    color: var(--white);
+    border: none;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 13px;
+}
+
+.ata-img {
+    height: 55px;
+    border-radius: 5px;
+    opacity: 0.95;
+}
+
+/* =========================================
+   5. MODERN HERO (SLIDER) ALANI
+   ========================================= */
+.hero-modern {
+    height: 480px; 
+    background-color: #08294a; /* Derin Kurumsal Lacivert */
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-wrapper {
+    display: flex;
+    width: 400%; 
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.hero-slide {
+    flex: 0 0 25%; 
+    width: 25%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Slayt Karartma Perdesi (Lacivert Filtre) */
+.hero-slide:nth-child(1) { background-image: linear-gradient(rgba(8, 41, 74, 0.85), rgba(8, 41, 74, 0.85)), url('kampus-gece.jpg'); }
+.hero-slide:nth-child(2) { background-image: linear-gradient(rgba(8, 41, 74, 0.85), rgba(8, 41, 74, 0.85)), url('golbasi-bg.jpg'); }
+.hero-slide:nth-child(3) { background-image: linear-gradient(rgba(8, 41, 74, 0.85), rgba(8, 41, 74, 0.85)), url('kecioren-bg.jpg'); }
+.hero-slide:nth-child(4) { background-image: linear-gradient(rgba(8, 41, 74, 0.85), rgba(8, 41, 74, 0.85)), url('ziyaret-bg.jpg'); }
+
+.hero-overlay {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    text-align: center;
+}
+
+.hero-badge {
+    background: #c9a74d;
+    padding: 6px 20px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 15px;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    text-transform: uppercase;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 15px rgba(0,0,0,0.4);
+}
+
+/* --- ELİT TAM OVAL BUTON --- */
+.btn-gold-lg {
+    display: inline-block;
+    background: linear-gradient(135deg, #c9a74d 0%, #a8893c 100%);
+    color: white !important;
+    padding: 16px 42px;
+    border-radius: 50px; /* Tam Oval */
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    box-shadow: 0 6px 20px rgba(201, 167, 77, 0.4);
+    transition: all 0.4s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-gold-lg:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(201, 167, 77, 0.5);
+    filter: brightness(1.1);
+}
+
+/* =========================================
+   6. HAKKIMIZDA & SIDEBAR (KURUMSAL)
+   ========================================= */
+.page-container {
+    padding: 80px 0;
+    background-color: #fcfcfc;
+}
+
+.content-wrapper {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 40px;
+    padding: 0 50px;
+}
+
+.sidebar-elit {
+    flex: 0 0 300px;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+    height: fit-content;
+}
+
+.sidebar-elit ul li a {
+    display: flex;
+    align-items: center;
+    padding: 16px 0;
+    color: #555;
+    text-decoration: none;
+    border-bottom: 1px solid #f0f0f0;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.sidebar-elit ul li a i {
+    font-size: 10px;
+    margin-right: 12px;
+    color: #c9a74d;
+}
+
+.sidebar-elit ul li a:hover, .sidebar-elit ul li a.active {
+    color: #c9a74d;
+    padding-left: 10px;
+}
+
+.section-title-elit {
+    background: #333; /* Orijinal resimdeki koyu gri kutu */
+    color: white;
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 6px;
+    margin-bottom: 25px;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+
+
+}
+/* ==================
+   HAKKIMIZDA SAYFASI 
+   ================== */
+
+   
+
+.page-container-elit {
+    padding: 80px 0;
+    background-color: #f8f9fa; /* Hafif gri arka plan */
+}
+
+.content-wrapper-elit {
+    display: flex;
+    max-width: 1300px; /* Ana sayfadaki genişlikle aynı */
+    margin: 0 auto;
+    gap: 40px; /* Menü ve içerik arasındaki boşluk */
+    padding: 0 20px;
+}
+
+/* Sol Sidebar Tasarımı */
+.sidebar-elit {
+    flex: 0 0 300px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    height: fit-content;
+    position: sticky; /* Sayfayla birlikte kaysın */
+    top: 120px;
+}
+
+.sidebar-header h3 {
+    color: #0b3c6d; /* Kurumsal Lacivert */
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.gold-line {
+    width: 40px;
+    height: 3px;
+    background: #c9a74d; /* Kurumsal Altın */
+    margin-bottom: 25px;
+}
+
+.sidebar-elit ul { list-style: none; }
+.sidebar-elit ul li a {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    color: #555;
+    text-decoration: none;
+    border-bottom: 1px solid #f0f0f0;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.sidebar-elit ul li a i {
+    font-size: 10px;
+    margin-right: 12px;
+    color: #c9a74d;
+}
+
+.sidebar-elit ul li a:hover, .sidebar-elit ul li a.active {
+    color: #c9a74d;
+    padding-left: 10px;
+}
+
+/* Sağ İçerik Alanı */
+.main-article-elit {
+    flex: 1;
+}
+
+.article-card {
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.article-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    object-fit: cover;
+    max-height: 300px;
+}
+
+.article-title-elit {
+    color: #0b3c6d;
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.article-content p {
+    font-size: 17px;
+    color: #000;
+    line-height: 1.9;
+    margin-bottom: 25px;
+    text-align:justify;
+}
+
+.article-content p strong {
+    font-weight: 17px;
+    color: #444;
+    line-height: 1.9;
+    margin-bottom: 25px;
+    text-align:justify;
+}
+.gold-text{
+    color:#c9a74d;
+    font-weight:700;
+    font-style:italic;
+}
+
+
+:root {
+    --primary-blue: #08294a;
+    --gold: #c9a74d;
+    --white: #ffffff;
+    --transition: all 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', sans-serif; background: #f8f9fa; overflow-x: hidden; }
+
+
+
+/* HEADER & TOPBAR */
+.top-bar { background: #112131; color: white; padding: 10px 0; font-size: 12px; }
+.header-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1300px; margin: 0 auto; padding: 0 20px; }
+.top-social a { color: white; margin-right: 15px; text-decoration: none; }
+.main-header { background: white; padding: 10px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+.logo img { height: 70px; }
+nav ul { display: flex; list-style: none; gap: 20px; }
+nav ul li a { text-decoration: none; color: var(--primary-blue); font-weight: 700; font-size: 13px; text-transform: uppercase; }
+
+
+
+/* SLIDER ALANI (KOMPAKT & KOYU LACİVERT) */
+.hero-modern { height: 480px; position: relative; overflow: hidden; background: var(--primary-blue); }
+.slider-wrapper { display: flex; width: 400%; height: 100%; transition: var(--transition); }
+.hero-slide { flex: 0 0 25%; height: 100%; background-size: cover; background-position: center; position: relative; }
+
+
+
+
+/* Lacivert Filtre */
+.hero-slide:nth-child(1) { background-image: linear-gradient(rgba(8, 41, 74, 0.85), rgba(8, 41, 74, 0.85)), url('kampus-gece.jpg'); }
+.hero-slide:nth-child(2) { background-image: linear-gradient(rgba(8, 41, 74, 0.85), rgba(8, 41, 74, 0.85)), url('golbasi-bg.jpg'); }
+.hero-slide:nth-child(3) { background-image: linear-gradient(rgba(8, 41, 74, 0.85), rgba(8, 41, 74, 0.85)), url('kecioren-bg.jpg'); }
+.hero-slide:nth-child(4) { background-image: linear-gradient(rgba(8, 41, 74, 0.85), rgba(8, 41, 74, 0.85)), url('ziyaret-bg.jpg'); }
+
+.hero-overlay { height: 100%; display: flex; align-items: center; justify-content: center; color: white; text-align: center; }
+.hero-badge { background: var(--gold); padding: 6px 20px; border-radius: 50px; font-size: 11px; font-weight: 700; margin-bottom: 15px; display: inline-block; }
+.hero-content h1 { font-size: 42px; font-weight: 800; text-transform: uppercase; margin-bottom: 15px; }
+
+
+
+/* TAM OVAL BUTON */
+.btn-gold-lg { 
+    display: inline-block; background: linear-gradient(135deg, #c9a74d 0%, #a8893c 100%);
+    color: white !important; padding: 15px 40px; border-radius: 50px; font-weight: 700;
+    text-decoration: none; text-transform: uppercase; box-shadow: 0 6px 20px rgba(201, 167, 77, 0.3);
+    transition: 0.3s;
+}
+.btn-gold-lg:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(201, 167, 77, 0.5); }
+
+
+
+
+/* 4'LÜ KUTU YAPISI (PETEK) */
+.quick-access-section { padding: 60px 0; background: #f8f9fa; }
+.access-container { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 0 20px; }
+.access-card { 
+    background: white; padding: 40px 20px; border-radius: 20px; text-align: center; 
+    text-decoration: none; box-shadow: 0 5px 20px rgba(0,0,0,0.05); transition: 0.4s;
+}
+.card-icon { font-size: 30px; color: var(--primary-blue); margin-bottom: 15px; transition: 0.3s; }
+.access-card h3 { color: var(--primary-blue); font-size: 14px; font-weight: 800; margin-bottom: 10px; }
+.card-link { color: var(--gold); font-size: 12px; font-weight: 700; text-transform: uppercase; }
+
+.access-card:hover { background: var(--primary-blue); transform: translateY(-10px); }
+.access-card:hover h3, .access-card:hover .card-link, .access-card:hover .card-icon { color: white; }
+
+.nav-btn { position: absolute; top: 50%; background: rgba(255,255,255,0.1); color: white; border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; }
+.prev { left: 20px; } .next { right: 20px; }
+
+
+
+
+
+/* =========================================
+   BAŞVURU SAYFASI ÖZEL TASARIMI
+   ========================================= */
+
+/* Form Arka Planı (Tüm Sayfayı Kaplar) */
+.form-section {
+    background: linear-gradient(135deg, #08294a 0%, #112131 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* Form Kartı */
+.form-container-modern {
+    background: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    padding: 40px;
+    border-radius: 30px; /* Elit yuvarlak köşeler */
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+/* Form Başlık Alanı */
+.form-header-modern img {
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.form-header-modern h2 {
+    color: #0b3c6d;
+    font-size: 24px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.form-header-modern p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* Giriş Alanları */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    color: #0b3c6d;
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.input-group label i {
+    color: #c9a74d; /* İkonlar Altın Sarısı */
+    margin-right: 5px;
+}
+
+.input-group input, 
+.input-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #f0f0f0;
+    border-radius: 12px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    outline: none;
+    background: #f9f9f9;
+}
+
+.input-group input:focus, 
+.input-group select:focus {
+    border-color: #c9a74d;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(201, 167, 77, 0.1);
+}
+
+/* Yan Yana Alanlar (TC ve Sınıf) */
+.input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* Gönder Butonu (Oval ve Elit) */
+.btn-gold-submit {
+    width: 100%;
+    background: linear-gradient(135deg, #c9a74d 0%, #a8893c 100%);
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 50px; /* Tam Oval */
+    font-weight: 800;
+    font-size: 14px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 10px 20px rgba(201, 167, 77, 0.3);
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-gold-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(201, 167, 77, 0.4);
+    filter: brightness(1.1);
+}
+/* Form Sayfası Genel Arka Planı */
+.form-section {
+    background: linear-gradient(135deg, #08294a 0%, #112131 100%) !important;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+/* Beyaz Form Kartı */
+.form-container-modern {
+    background: #ffffff !important;
+    padding: 45px;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    max-width: 550px;
+    width: 100%;
+}
+
+/* Form Başlıkları */
+.form-header-modern h2 {
+    color: #0b3c6d;
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+/* Giriş Alanları (Inputlar) */
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #f0f0f0;
+    border-radius: 15px;
+    margin-top: 5px;
+    transition: 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #c9a74d;
+    outline: none;
+    background: #fffdf5;
+}
+
+/* Gönder Butonu (Tam Oval & Parlak) */
+.btn-gold-submit {
+    background: linear-gradient(135deg, #c9a74d 0%, #a8893c 100%) !important;
+    color: white !important;
+    width: 100%;
+    padding: 18px;
+    border-radius: 50px;
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 10px 20px rgba(201, 167, 77, 0.3);
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.btn-gold-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(201, 167, 77, 0.5);
+} 
+
+/* Logoyu Küçültmeye Zorla */
+img.small-article-logo {
+    width: 120px !important;  /* Genişliği 120px'e sabitle */
+    max-width: 120px !important;
+    height: auto !important;
+    float: right !important;
+    margin-left: 20px !important;
+    margin-bottom: 20px !important;
+    display: inline-block !important;
+}
+
+/* Genel Müdür Mesajı Özel Stilleri */
+.message-container {
+    display: block; /* Yazının resmin altından akması için */
+    overflow: hidden;
+}
+
+.director-photo {
+    width: 450px;           /* Fotoğraf boyutu */
+    height: auto;
+    float: left;            /* Sola yasla */
+    margin-right: 30px;     /* Yazıyla arasını aç */
+    margin-bottom: 20px;
+    border-radius: 20px;    /* Köşeleri yuvarlat */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.message-text p {
+    font-size: 17px !important;
+    color: #1a1a1a !important; /* Daha baskın siyah */
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-align: justify;    /* İki yana yasla (kitap gibi) */
+}
+
+/* Hitap kısmı */
+.salutation {
+    font-weight: 700;
+    color: #0b3c6d !important;
+    font-size: 19px !important;
+}
+
+/* İmza Alanı */
+.signature {
+    margin-top: 40px;
+    text-align: right; /* İmzayı sağa yasla */
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.sign-name {
+    font-size: 22px;
+    font-weight: 800;
+    color: #0b3c6d;
+    text-transform: uppercase;
+}
+
+.sign-title {
+    color: #c9a74d; /* Altın sarısı ünvan */
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Mobilde fotoğrafın ortalanması için */
+@media (max-width: 768px) {
+    .director-photo {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+
+
+.director-message-card {
+    background: #ffffff;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 50px;
+    border-radius: 20px;
+    /* Lacivert Çerçeve */
+    border: 3px solid #0b3c6d; 
+    /* Lacivert Tonlu Güçlü Gölge */
+    box-shadow: 0 20px 40px rgba(11, 60, 109, 0.2); 
+    overflow: hidden;
+}
+
+.message-wrapper {
+    display: block; /* Yazının resmin altından akması için */
+}
+
+.director-photo-framed {
+    width: 450px;
+    float: left;
+    margin-right: 35px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    border: 1px solid #eee;
+}
+
+/* Metinlerin Simsiyah ve Baskın Olması */
+.message-text-content p {
+    color: #000000 !important; /* Tam Siyah */
+    font-size: 17.5px;
+    line-height: 1.8;
+    text-align: justify; /* Yazıyı iki yana yaslar (Düzenli durur) */
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+
+/* Hitap Kısmı */
+.salutation {
+    font-size: 21px !important;
+    color: #0b3c6d !important; /* Kurumsal Lacivert */
+    font-weight: 700 !important;
+    margin-bottom: 25px !important;
+}
+
+/* İmza Kısmı */
+.signature-area {
+    margin-top: 40px;
+    text-align: right;
+    border-top: 2px solid #f0f0f0;
+    padding-top: 20px;
+}
+
+.sign-name {
+    font-size: 24px;
+    font-weight: 800;
+    color: #0b3c6d;
+    text-transform: uppercase;
+}
+
+.sign-title {
+    color: #c9a74d; /* Kurumsal Altın */
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+/* Başlık Ayarı */
+.article-title-elit {
+    font-size: 32px;
+    color: #0b3c6d;
+    font-weight: 800;
+    margin-bottom: 35px;
+    text-align: center;
+    border-bottom: 2px solid #c9a74d;
+    padding-bottom: 15px;
+}
