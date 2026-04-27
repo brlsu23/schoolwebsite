@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Başvuru Formu | DataKent Koleji</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<section class="form-section">
+    <div class="form-container-modern">
+        <div class="form-header-modern">
+            <img src="data-kent-logo.png" alt="DataKent Logo" class="form-logo">
+            <h2>Başvuru Formu</h2>
+            <p>Geleceğinize ilk adımı atın. Lütfen bilgileri eksiksiz doldurunuz.</p>
+        </div>
+
+        <form action="https://formsubmit.co/golbasi.bilgi@datakentegitimkurumlari.com" method="POST">
+            <div class="input-group">
+                <label><i class="fas fa-user"></i> Öğrenci Adı Soyadı</label>
+                <input type="text" name="name" placeholder="Örn: Beril Su Bavbek" required>
+            </div>
+
+            <div class="input-row">
+                <div class="input-group">
+                    <label><i class="fas fa-id-card"></i> T.C. Kimlik No</label>
+                    <input type="text" name="tc" maxlength="11" placeholder="Opsiyonel">
+                </div>
+                <div class="input-group">
+                    <label><i class="fas fa-school"></i> Mevcut Sınıf</label>
+                    <select name="class" required>
+                        <option value="">Sınıf Seçiniz</option>
+                        <option value="9">9. Sınıf</option>
+                        <option value="10">10. Sınıf</option>
+                        <option value="11">11. Sınıf</option>
+                        <option value="12">12. Sınıf</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label><i class="fas fa-phone"></i> Veli Telefon No</label>
+                <input type="tel" name="phone" placeholder="05xx xxx xx xx" required>
+            </div>
+
+            <div class="input-group">
+                <label><i class="fas fa-map-marker-alt"></i> Tercih Edilen Kampüs</label>
+                <select name="campus" required>
+                    <option value="Golbasi">Gölbaşı Kampüsü</option>
+                    <option value="Kecioren">Keçiören Kampüsü</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn-gold-submit">BAŞVURUYU GÖNDER</button>
+        </form>
+    </div>
+</section>
+
+</body>
+</html>
