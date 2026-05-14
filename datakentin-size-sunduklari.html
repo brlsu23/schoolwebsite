@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datakentin Size Sundukları| DataKent Koleji</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <section class="page-header-elit" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('okul-binasi.jpg');">
+        <div class="header-content">
+            <h1>Datakentin Size Sundukları</h1>
+            <nav class="breadcrumb-elit">
+                <a href="index.html">Anasayfa</a> <span class="sep">»</span> 
+                <a href="insankaynaklari.html">İnsan Kaynakları</a> <span class="sep">»</span> 
+                <span class="current">Datakentin Size Sundukları</span>
+            </nav>
+        </div>
+    </section>
+    <!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datakent Koleji - Kariyer ve Size Sundukları</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* --- VİZYONER CSS STİLLERİ --- */
+        :root {
+            --primary: #1a2a6c;   /* Kurumsal Lacivert */
+            --secondary: #b21f1f; /* Kurumsal Bordo */
+            --accent: #fdbb2d;    /* Vurgu Sarısı (Vizyoner dokunuş) */
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --bg-page: #f8fbfd;
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-page);
+            margin: 0;
+            padding: 60px 20px;
+            color: var(--text-dark);
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Sayfa Giriş Başlığı */
+        .header-section {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .header-section h1 {
+            color: var(--primary);
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-bottom: 3px solid var(--accent);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .header-section p {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            color: #555;
+            max-width: 850px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        /* --- Kartlar Grid Düzeni --- */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 35px;
+            padding-top: 20px;
+        }
+
+        /* --- VİZYONER VE ŞIK KART TASARIMI --- */
+        .benefit-card {
+            background: #fff;
+            padding: 50px 35px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: var(--transition);
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden; /* Hover çizgisi için */
+        }
+
+        /* Kart Üzerine Gelince Animasyon */
+        .benefit-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 50px rgba(26, 42, 108, 0.08);
+            border-color: rgba(26, 42, 108, 0.1);
+        }
+
+        /* Alt Renkli Çizgi Efekti */
+        .benefit-card::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--secondary), var(--accent));
+            transform: scaleX(0);
+            transition: var(--transition);
+        }
+
+        .benefit-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        /* İkon Alanı ve Arka Plan Dairesi */
+        .icon-circle {
+            width: 90px;
+            height: 90px;
+            background-color: #fdf2f2; /* Hafif bordo arka plan */
+            color: var(--secondary); /* Kurumsal Bordo */
+            border-radius: 50%;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            transition: var(--transition);
+            border: 3px solid transparent;
+        }
+
+        /* Hoverda İkon Efekti */
+        .benefit-card:hover .icon-circle {
+            background-color: var(--secondary);
+            color: #fff;
+            transform: rotate(10deg);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .benefit-card h3 {
+            color: var(--primary); /* Kurumsal Lacivert */
+            font-size: 1.5rem;
+            margin-bottom: 18px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .benefit-card p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #666;
+        }
+
+        /* Sayfa Altındaki Kapanış Bannerı */
+        .footer-banner {
+            margin-top: 80px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 1.2rem;
+            box-shadow: 0 10px 30px rgba(178, 31, 31, 0.15);
+            font-weight: 300;
+        }
+
+        .footer-banner strong {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        /* Mobil Uyumluluk */
+        @media (max-width: 768px) {
+            .header-section h1 { font-size: 1.8rem; }
+            .header-section p { font-size: 1rem; }
+            .grid-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    
+
+<div class="main-container">
+    
+    
+    
+    <div class="header-section">
+        
+        <h1>Datakent Koleji'nin Size Sundukları</h1>
+        <p>Eğitimde sadece öğrenciler değil, eğitimciler de gelişir. Datakent Koleji olarak, birlikte çalıştığımız her bireyin mesleki ve kişisel gelişimini önemsiyor, güçlü bir kurum kültürüyle ilerliyoruz.</p>
+    </div>
+
+    <div class="grid-container">
+        
+        <div class="benefit-card">
+            <div class="icon-circle">
+                <i class="fas fa-chalkboard-teacher"></i> </div>
+            <h3>Profesyonel Gelişim Desteği</h3>
+            <p>Eğitim kadromuza yıl boyunca düzenli hizmet içi eğitimler, seminerler ve atölyeler sunuyor; yenilikçi yaklaşımlarla mesleki gelişimi destekliyoruz.</p>
+        </div>
+
+        <div class="benefit-card">
+            <div class="icon-circle">
+                <i class="fas fa-handshake"></i> </div>
+            <h3>Pozitif Kurum Kültürü</h3>
+            <p>İletişimi güçlü, saygı ve iş birliğine dayalı bir çalışma ortamı sunuyoruz. Her çalışanın değer gördüğü, fikirlerinin önemsendiği bir yapı inşa ediyoruz.</p>
+        </div>
+
+        <div class="benefit-card">
+            <div class="icon-circle">
+                <i class="fas fa-seedling"></i> </div>
+            <h3>Kariyer Yolculuğu</h3>
+            <p>Başarıyı ödüllendiren, liyakat ilkesine dayalı kariyer planlamalarıyla çalışanlarımızın kurum içinde büyümesini teşvik ediyoruz.</p>
+        </div>
+
+        <div class="benefit-card">
+            <div class="icon-circle">
+                <i class="fas fa-balance-scale"></i> </div>
+            <h3>Dengeli Çalışma Düzeni</h3>
+            <p>Verimli zaman yönetimi ilkesiyle hazırlanan planlar sayesinde, eğitimcilerimizin mesleki motivasyonunu ve yaşam dengesini koruyoruz.</p>
+        </div>
+
+        <div class="benefit-card">
+            <div class="icon-circle">
+                <i class="fas fa-laptop-code"></i> </div>
+            <h3>Modern ve Teknolojik Donanım</h3>
+            <p>Eğitimcilere ilham veren, teknolojik donanımlı sınıf ve çalışma alanlarımızla, öğretmenlik deneyimini daha verimli hâle getiriyoruz.</p>
+        </div>
+
+        <div class="benefit-card">
+            <div class="icon-circle">
+                <i class="fas fa-users"></i> </div>
+            <h3>Sosyal Destek ve Takım Ruhu</h3>
+            <p>Yıl boyunca düzenlenen sosyal etkinlikler, eğitim kampları ve kurum içi buluşmalarla güçlü bir takım ruhu oluşturuyoruz.</p>
+        </div>
+
+    </div>
+
+    <div class="footer-banner">
+        <strong>Datakent Koleji</strong> olarak; gelişime açık, vizyoner ve değer odaklı bir kadroyla çalışmaktan mutluluk duyuyoruz.
+    </div>
+</div>
+
+</body>
+</html>
