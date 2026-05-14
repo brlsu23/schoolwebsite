@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datakent Koleji Disiplin Suç ve Cezaları Uygulama Esasları</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .policy-container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-top: 6px solid #2c3e50;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 15px;
+            text-transform: uppercase;
+            font-size: 1.6em;
+        }
+        h2 {
+            color: #c0392b;
+            border-left: 5px solid #c0392b;
+            padding-left: 10px;
+            margin-top: 30px;
+            font-size: 1.3em;
+            background-color: #fdf2f2;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        h3 {
+            color: #2980b9;
+            margin-top: 25px;
+            border-bottom: 1px solid #eee;
+        }
+        h4 {
+            color: #16a085;
+            margin-top: 20px;
+            font-style: italic;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        ul {
+            margin-bottom: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .highlight-box {
+            background-color: #f1f4f6;
+            border: 1px solid #d1d8dd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .law-ref {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .kvkk-alert {
+            color: #d35400;
+            font-weight: bold;
+        }
+        @media print {
+            body { background-color: #fff; }
+            .policy-container { box-shadow: none; border: 1px solid #ccc; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="policy-container">
+    <h1>DİSİPLİN SUÇ VE CEZALARI UYGULAMA ESASLARI</h1>
+
+    <p class="highlight-box">
+        <span class="law-ref">Gelecek 520 Eğitim Öğretim Kurs İnş. Otomotiv Turizm Ve Tic. Ltd. Şti (Datakent Koleji)</span> kapsamında personel ile işçilerin disiplin işlemleri <span class="law-ref">4857 sayılı İş Kanunu</span>'nun ilgili maddelerinde belirtilen esaslar doğrultusunda yürütülmektedir.
+    </p>
+
+    <h2>A- DİSİPLİN SUÇ VE CEZALARI</h2>
+    <p>Teknik ve destek hizmetleri personelinin görev ve sorumluluklarını yerine getirmemeleri halinde uygulanacak cezalar şunlardır:</p>
+    <ul>
+        <li>I. Uyarma</li>
+        <li>II. Kınama</li>
+        <li>III. Ücret Kesintisi</li>
+        <li>IV. İş Akdini Fesih</li>
+    </ul>
+
+    <h3>1. "Uyarma" Cezası Gerektiren Haller</h3>
+    <ul>
+        <li><strong>a)</strong> Görevle ilgili araç ve gereçlerin kullanımında kayıtsızlık göstermek veya düzensiz davranmak,</li>
+        <li><strong>b)</strong> Özürsüz veya izinsiz olarak göreve geç gelmek, erken ayrılmak, görev yerini terk etmek,</li>
+        <li><strong>c)</strong> Görevine ve iş sahiplerine karşı kayıtsızlık göstermek,</li>
+        <li><strong>d)</strong> Görevin işbirliği içinde yapılması ilkesine aykırı davranmak,</li>
+        <li><strong>e)</strong> Çağrıldığı toplantılara mazeretsiz katılmamak,</li>
+        <li><strong>f)</strong> <span class="kvkk-alert">6698 Sayılı KVKK</span> kapsamındaki politikalara, eğitimlere ve kurallara aykırı davranmak.</li>
+    </ul>
+
+    <h3>2. "Kınama" Cezası Gerektiren Haller</h3>
+    <ul>
+        <li><strong>a)</strong> Görevle ilgili araç ve gerecin bakımında kusurlu davranmak,</li>
+        <li><strong>b)</strong> İş veren, hiyerarşik üstler ve diğer personele saygısız davranmak,</li>
+        <li><strong>c)</strong> İş yeri malzemelerini özel işlerinde kullanmak,</li>
+        <li><strong>d)</strong> Misafir, müşteri veya iş arkadaşlarına kötü muamelede bulunmak,</li>
+        <li><strong>e)</strong> Borçlarını kasten ödemeyerek yasal yollara başvurulmasına neden olmak,</li>
+        <li><strong>f)</strong> <span class="law-ref">Datakent Koleji</span> çatısı altında huzur ve çalışma düzenini bozmak,</li>
+        <li><strong>g)</strong> <span class="kvkk-alert">KVKK</span> kurallarına uymayarak haklı bir şikayete sebebiyet vermek.</li>
+    </ul>
+
+    <h3>3. "Ücret Kesintisi" Cezası Gerektiren Haller</h3>
+    <ul>
+        <li><strong>a)</strong> Kasıtlı olarak emir ve görevleri zamanında yapmamak,</li>
+        <li><strong>b)</strong> Özürsüz olarak en çok iki gün göreve gelmemek,</li>
+        <li><strong>c)</strong> Yükümlü olduğu kişilere yalan ve yanlış beyanda bulunmak,</li>
+        <li><strong>d)</strong> Belgelerde tahrifat yapmak, tahrif edilmiş belgeleri kullanmak,</li>
+        <li><strong>e)</strong> <span class="kvkk-alert">KVKK</span> ihlali nedeniyle kınama almasına rağmen aynı eylemi tekrarlamak.</li>
+    </ul>
+
+    <h3>4. İş Akdini Fesih (4857 Sayılı İş Kanunu Md. 25)</h3>
+    <p>Aşağıdaki hallerde iş akdi derhal feshedilir:</p>
+    <h4>I. Sağlık Sebepleri</h4>
+    <ul>
+        <li><strong>a)</strong> Kendi kastından veya içkiye düşkünlüğünden doğacak devamsızlığın ardı ardına 3 iş günü veya bir ayda 5 iş gününü geçmesi,</li>
+        <li><strong>b)</strong> Bulaşıcı veya işi ile bağdaşmayacak derecede hastalık durumunun anlaşılması.</li>
+    </ul>
+    <h4>II. Ahlak ve İyi Niyet Kurallarına Uymayan Haller</h4>
+    <ul>
+        <li><strong>a)</strong> İşe alım sırasında yalan beyanda bulunmak,</li>
+        <li><strong>b)</strong> İşverene veya aile üyelerine şeref ve namusuna dokunacak sözler sarf etmek,</li>
+        <li><strong>c)</strong> Güveni kötüye kullanmak, hırsızlık yapmak veya meslek sırlarını ortaya atmak,</li>
+        <li><strong>d)</strong> İşyerinde 7 günden fazla hapis cezası gerektiren ve ertelenmeyen bir suç işlemek,</li>
+        <li><strong>e)</strong> Mazeretsiz ardı ardına 2 gün veya bir ayda toplam 3 iş günü devamsızlık yapmak,</li>
+        <li><strong>f)</strong> Görevleri hatırlatıldığı halde yapmamak,</li>
+        <li><strong>g)</strong> İş güvenliğini tehlikeye düşürmek veya işyerine 30 günlük ücretiyle ödeyemeyecek derecede hasar vermek,</li>
+        <li><strong>h)</strong> <span class="kvkk-alert">KVKK</span> tedbirlerine uymayarak kurumun adli-idari yaptırıma uğramasına neden olmak.</li>
+    </ul>
+
+    <h2>B- UYGULAMA ESASLARI</h2>
+    <ol>
+        <li><strong>Suçun Tekrarı:</strong> Disiplin suçlarının ikinci tekrarında bir derece ağır ceza verilir.</li>
+        <li><strong>İyi Hal:</strong> Geçmiş çalışmaları olumlu olan personel için bir derece hafif ceza uygulanabilir veya sözlü uyarı yapılabilir.</li>
+        <li><strong>Soruşturma:</strong> Yetkili kişi iş sahibi, vekili veya KVKK veri sorumlusudur. KVK Komitesi'nden görüş alınabilir.</li>
+        <li><strong>Savunma Hakkı:</strong> Savunma alınmadan ceza verilemez. Personele en az 7 günlük savunma süresi verilir.</li>
+        <li><strong>Raporlama:</strong> Soruşturma sonunda delillerin ve savunmanın özetlendiği bir rapor düzenlenir.</li>
+    </ol>
+
+    <h2>C- YETKİLİ AMİR VE KURULLAR</h2>
+    <ul>
+        <li><strong>Uyarma:</strong> Müdür/Departman sorumlusu tarafından verilir.</li>
+        <li><strong>Kınama:</strong> Müdür önerisi ve Yönetim Kurulu kararı ile verilir.</li>
+        <li><strong>Ücret Kesintisi:</strong> Departman sorumlusu teklifi ve Yönetim Kurulu kararı ile verilir.</li>
+        <li><strong>İş Akdi Feshi:</strong> Doğrudan <span class="law-ref">Datakent Koleji Yönetim Kurulu</span> tarafından verilir.</li>
+    </ul>
+
+    <h2>D- YÜRÜRLÜK VE TEBLİĞ</h2>
+    <p>Cezalar yazılı olarak tebliğ edilir ve bir örneği özlük dosyasında muhafaza edilir. Disiplin cezaları verildiği tarihten itibaren derhal uygulanır. İş akdi feshinde soruşturma sonrası 6 iş günü içinde tebligat yapılmalıdır.</p>
+    
+    <div class="highlight-box">
+        <p><strong>Beyan:</strong> Personel, bu uygulama esasları ve KVKK kuralları hakkında eğitim aldığını ve bu metnin kendisine tebliğ edildiğini kabul eder. Esasları bilmemek mazeret teşkil etmez.</p>
+    </div>
+</div>
+
+</body>
+</html>disiplin
