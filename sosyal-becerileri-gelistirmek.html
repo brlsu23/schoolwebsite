@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sosyal Becerileri Geliştirmek | DataKent Koleji</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0b3c6d;
+            --gold: #c9a74d;
+            --bg-page: #f4f7f9;
+            --white: #ffffff;
+            --text: #444;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0; padding: 0;
+            background-color: var(--bg-page);
+            color: var(--text);
+        }
+
+        /* 1. ÜST BANNER */
+        .page-header-pdr {
+            height: 400px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('okul-binasi.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .header-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin: 0;
+        }
+
+        .breadcrumb-pdr {
+            margin-top: 15px;
+            font-size: 1.1rem;
+        }
+
+        .breadcrumb-pdr a { color: #fff; text-decoration: none; }
+        .breadcrumb-pdr span { margin: 0 10px; color: var(--gold); }
+
+        /* 2. ANA KONTEYNER */
+        .main-container {
+            max-width: 1250px;
+            margin: -60px auto 80px;
+            display: flex;
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        /* SIDEBAR (YAN MENÜ) */
+        .sidebar-pdr {
+            flex: 0 0 350px;
+            background: var(--white);
+            padding: 45px 30px;
+            border-radius: 35px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+            height: fit-content;
+            position: sticky;
+            top: 40px;
+        }
+
+        .sidebar-pdr h3 {
+            color: var(--primary);
+            font-size: 24px;
+            margin: 0 0 10px 0;
+        }
+
+        .gold-line {
+            width: 50px;
+            height: 4px;
+            background: var(--gold);
+            margin-bottom: 35px;
+            border-radius: 2px;
+        }
+
+        .sidebar-pdr ul { list-style: none; padding: 0; margin: 0; }
+        .sidebar-pdr li { 
+            border-bottom: 1px solid #eee;
+        }
+
+        .sidebar-pdr li a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 600;
+            padding: 18px 0;
+            display: flex;
+            align-items: center;
+            transition: 0.3s;
+        }
+
+        .sidebar-pdr li a i {
+            color: var(--gold);
+            margin-right: 15px;
+            font-size: 18px;
+        }
+
+        .sidebar-pdr li a.active {
+            color: var(--primary);
+        }
+
+        .sidebar-pdr li a:hover {
+            transform: translateX(5px);
+            color: var(--primary);
+        }
+
+        /* İÇERİK ALANI */
+        .content-area {
+            flex: 1;
+            background: var(--white);
+            padding: 60px;
+            border-radius: 35px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.06);
+        }
+
+        .content-area h2 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .content-area h4 {
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+        .content-area p {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            color: var(--primary);
+            border-left: 5px solid var(--gold);
+            padding-left: 15px;
+            margin: 40px 0 20px 0;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .list-style {
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
+
+        .list-style li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .quote-box {
+            background: #f9fbfd;
+            border: 1px dashed var(--gold);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            font-weight: 700;
+            color: var(--primary);
+            margin-top: 50px;
+        }
+
+        @media (max-width: 992px) {
+            .main-container { flex-direction: column; }
+            .sidebar-pdr { flex: none; width: 100%; position: static; box-sizing: border-box; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="page-header-pdr">
+        <div class="header-content">
+            <h1>Sosyal Becerileri Geliştirmek</h1>
+            <nav class="breadcrumb-pdr">
+                <a href="index.html">Anasayfa</a> 
+                <span>»</span> 
+                <a href="pdr.html">Datakent PDR</a>
+                <span>»</span> 
+                <b>Sosyal Beceriler</b>
+            </nav>
+        </div>
+    </section>
+
+    <div class="main-container">
+        
+        <aside class="sidebar-pdr">
+            <h3>Datakent PDR</h3>
+            <div class="gold-line"></div>
+            <ul>
+                <li><a href="okula-uyum-sureci.html"><i class="fas fa-long-arrow-alt-right"></i> Okula Uyum Süreci</a></li>
+                <li><a href="sosyal-beceriler.html" class="active"><i class="fas fa-long-arrow-alt-right"></i> Sosyal Becerileri Geliştirmek</a></li>
+                <li><a href="hedef-belirleme.html"><i class="fas fa-long-arrow-alt-right"></i> Hedef Belirleme</a></li>
+                <li><a href="stres-yonetimi.html"><i class="fas fa-long-arrow-alt-right"></i> Stres Yönetimi ve Öfke Kontrolü</a></li>
+                <li><a href="sinir-koyma.html"><i class="fas fa-long-arrow-alt-right"></i> Sınır Koyma</a></li>
+                <li><a href="mukemmeliyetcilik.html"><i class="fas fa-long-arrow-alt-right"></i> Mükemmeliyetçilik</a></li>
+                <li><a href="zaman-yonetimi.html"><i class="fas fa-long-arrow-alt-right"></i> Zaman Yönetimi</a></li>
+                <li><a href="mentorluk-sistemi.html"><i class="fas fa-long-arrow-alt-right"></i> Mentörlük Sistemi Nedir?</a></li>
+                <li><a href="bireysel-etut.html"><i class="fas fa-long-arrow-alt-right"></i> Bireysel Etüt ve Kabin Yöntemi</a></li>
+                <li><a href="olcme-degerlendirme.html"><i class="fas fa-long-arrow-alt-right"></i> Ölçme ve Değerlendirme Nedir?</a></li>
+            </ul>
+        </aside>
+
+        <main class="content-area">
+            <h2>Sosyal Becerileri Geliştirmek</h2>
+            <h4>Sağlıklı İletişim Kurmanın ve İlişki Sürdürmenin Anahtarı</h4>
+
+            <p>Akademik bilgi kadar önemli olan bir başka beceri vardır: insan ilişkilerini sağlıklı yürütebilmek. Bir öğrencinin kendini doğru ifade etmesi, arkadaşlarıyla etkili iletişim kurması, empati geliştirmesi ve grup içinde iş birliği yapabilmesi hem okul başarısını hem de ruhsal iyilik halini artırır.</p>
+
+            <h3 class="section-title">Sosyal Beceriler Nelerdir?</h3>
+            <p>Sosyal beceriler, bireyin diğer insanlarla etkili ve olumlu ilişkiler kurmasını sağlayan davranış kalıplarıdır. Öğrenciler için başlıca sosyal beceriler şunlardır:</p>
+            <ul class="list-style">
+                <li>Selamlaşma, tanışma ve sohbet başlatma,</li>
+                <li>Göz teması kurma ve etkin dinleme,</li>
+                <li>Empati yapma,</li>
+                <li>Duyguları uygun şekilde ifade etme,</li>
+                <li>Eleştiri alma ve yapıcı geri bildirim verme,</li>
+                <li>Hayır diyebilme ve sınır koyma.</li>
+            </ul>
+
+            <h3 class="section-title">Gelişmemesi Durumunda Ne Olur?</h3>
+            <p>Sosyal becerileri zayıf olan öğrencilerde akran ilişkilerinde zorlanma, dışlanma ve akademik başarıya rağmen sosyal yalnızlık hissi sıkça gözlemlenir.</p>
+
+            <h3 class="section-title">Nasıl Geliştirilir?</h3>
+            <ul class="list-style">
+                <li><b>Model Alma:</b> Çocuklar sosyal davranışları gözlemleyerek öğrenirler.</li>
+                <li><b>Etkin Dinleme:</b> Karşısındakini anlamaya çalışmak temel iletişim adımıdır.</li>
+                <li><b>Drama ve Rol Oynama:</b> Sosyal durumları canlandırarak deneyimlemek kalıcı öğrenme sağlar.</li>
+                <li><b>Grup Çalışmaları:</b> Ortak hedefler doğrultusunda çalışmak, paylaşmayı öğretir.</li>
+            </ul>
+
+            <h3 class="section-title">Velilere Öneriler</h3>
+            <ul class="list-style">
+                <li>Evde duygu ve düşüncelerin açıkça paylaşılmasına alan tanıyın.</li>
+                <li>Çocuğunuzun bir problem yaşadığında onun yerine çözüm üretmeyin; birlikte düşünün.</li>
+                <li>"Sen sus, büyükler konuşuyor" gibi kalıplar yerine, fikirlerini önemseyin.</li>
+            </ul>
+
+            <div class="quote-box">
+                "KENDİNE GÜVEN, İLETİŞİM KUR VE DÜNYANI DEĞİŞTİR!"
+            </div>
+        </main>
+    </div>
+</body>
+</html>
