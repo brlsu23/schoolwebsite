@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Okula Uyum Süreci | DataKent Koleji</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0b3c6d;
+            --gold: #c9a74d;
+            --bg-page: #f4f7f9;
+            --white: #ffffff;
+            --text: #444;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0; padding: 0;
+            background-color: var(--bg-page);
+            color: var(--text);
+        }
+
+        /* 1. ÜST BANNER (Görseldeki gibi) */
+        .page-header-pdr {
+            height: 400px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('okul-binasi.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .header-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin: 0;
+        }
+
+        .breadcrumb-pdr {
+            margin-top: 15px;
+            font-size: 1.1rem;
+        }
+
+        .breadcrumb-pdr a { color: #fff; text-decoration: none; }
+        .breadcrumb-pdr span { margin: 0 10px; color: var(--gold); }
+
+        /* 2. ANA KONTEYNER */
+        .main-container {
+            max-width: 1250px;
+            margin: -60px auto 80px;
+            display: flex;
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        /* SIDEBAR (Görseldeki Tasarım) */
+        .sidebar-pdr {
+            flex: 0 0 350px;
+            background: var(--white);
+            padding: 45px 30px;
+            border-radius: 35px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+            height: fit-content;
+            position: sticky;
+            top: 40px;
+        }
+
+        .sidebar-pdr h3 {
+            color: var(--primary);
+            font-size: 24px;
+            margin: 0 0 10px 0;
+        }
+
+        .gold-line {
+            width: 50px;
+            height: 4px;
+            background: var(--gold);
+            margin-bottom: 35px;
+            border-radius: 2px;
+        }
+
+        .sidebar-pdr ul { list-style: none; padding: 0; margin: 0; }
+        .sidebar-pdr li { 
+            border-bottom: 1px solid #eee;
+        }
+
+        .sidebar-pdr li a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 600;
+            padding: 18px 0;
+            display: flex;
+            align-items: center;
+            transition: 0.3s;
+        }
+
+        .sidebar-pdr li a i {
+            color: var(--gold);
+            margin-right: 15px;
+            font-size: 18px;
+        }
+
+        .sidebar-pdr li a.active {
+            color: var(--primary);
+        }
+
+        .sidebar-pdr li a:hover {
+            transform: translateX(5px);
+            color: var(--primary);
+        }
+
+        /* İÇERİK ALANI */
+        .content-area {
+            flex: 1;
+            background: var(--white);
+            padding: 60px;
+            border-radius: 35px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.06);
+        }
+
+        .content-area h2 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .content-area h4 {
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+
+        .content-area p {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            color: var(--primary);
+            border-left: 5px solid var(--gold);
+            padding-left: 15px;
+            margin: 40px 0 20px 0;
+            font-size: 1.3rem;
+        }
+
+        .list-style {
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
+
+        .list-style li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .quote-box {
+            background: #f9fbfd;
+            border: 1px dashed var(--gold);
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            font-weight: 700;
+            color: var(--primary);
+            margin-top: 50px;
+        }
+
+        @media (max-width: 992px) {
+            .main-container { flex-direction: column; }
+            .sidebar-pdr { flex: none; width: 100%; position: static; box-sizing: border-box; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="page-header-pdr">
+        <div class="header-content">
+            <h1>Okula Uyum Süreci</h1>
+            <nav class="breadcrumb-pdr">
+                <a href="index.html">Anasayfa</a> 
+                <span>»</span> 
+                <a href="pdr.html">Datakent PDR</a>
+                <span>»</span> 
+                <b>Okula Uyum Süreci</b>
+            </nav>
+        </div>
+    </section>
+
+    <div class="main-container">
+        
+        <aside class="sidebar-pdr">
+            <h3>Datakent PDR</h3>
+            <div class="gold-line"></div>
+            <ul>
+                <li><a href="okula-uyum-sureci.html" class="active"><i class="fas fa-long-arrow-alt-right"></i> Okula Uyum Süreci</a></li>
+                <li><a href="sosyal-beceriler.html"><i class="fas fa-long-arrow-alt-right"></i> Sosyal Becerileri Geliştirmek</a></li>
+                <li><a href="hedef-belirleme.html"><i class="fas fa-long-arrow-alt-right"></i> Hedef Belirleme</a></li>
+                <li><a href="stres-yonetimi.html"><i class="fas fa-long-arrow-alt-right"></i> Stres Yönetimi ve Öfke Kontrolü</a></li>
+                <li><a href="sinir-koyma.html"><i class="fas fa-long-arrow-alt-right"></i> Sınır Koyma</a></li>
+                <li><a href="mukemmeliyetcilik.html"><i class="fas fa-long-arrow-alt-right"></i> Mükemmeliyetçilik</a></li>
+                <li><a href="zaman-yonetimi.html"><i class="fas fa-long-arrow-alt-right"></i> Zaman Yönetimi</a></li>
+                <li><a href="mentorluk-sistemi.html"><i class="fas fa-long-arrow-alt-right"></i> Mentörlük Sistemi Nedir?</a></li>
+                <li><a href="bireysel-etut.html"><i class="fas fa-long-arrow-alt-right"></i> Bireysel Etüt ve Kabin Yöntemi</a></li>
+                <li><a href="olcme-degerlendirme.html"><i class="fas fa-long-arrow-alt-right"></i> Ölçme ve Değerlendirme Nedir?</a></li>
+            </ul>
+        </aside>
+
+        <main class="content-area">
+            <h2>Okula Uyum Süreci</h2>
+            <h4>Yeni Bir Başlangıca Duygusal, Sosyal ve Akademik Hazırlık</h4>
+
+            <p>Okula başlamak, öğrencinin hayatındaki en önemli dönüm noktalarından biridir. Bu ister ilkokul, ister ortaokul, isterse lise geçişi olsun; her dönem öğrencinin yeni bir çevreye, öğretmenlere, arkadaşlara ve kurallara alışmasını gerektirir. Bu süreç hem heyecan verici hem de kaygı yaratıcı olabilir.</p>
+
+            <p>Rehberlik hizmetlerinin en önemli görevlerinden biri, öğrencinin okula sağlıklı bir şekilde uyum sağlamasına destek olmaktır.</p>
+
+            <h3 class="section-title">Uyum Süreci Nedir?</h3>
+            <p>Uyum; öğrencinin yeni ortamın fiziksel, sosyal, duygusal ve kurumsal özelliklerine alışması, beklentileri anlaması ve kendini bu ortamda güvenli hissetmesi sürecidir.</p>
+            
+            <ul class="list-style">
+                <li>Derse katılım gösterir,</li>
+                <li>Kendini ifade eder,</li>
+                <li>Arkadaş ilişkileri kurar,</li>
+                <li>Okul kurallarına uyar,</li>
+                <li>Akademik başarı gösterir.</li>
+            </ul>
+
+            <h3 class="section-title">Uyum Sürecinde Gözlenebilecek Tepkiler</h3>
+            <ul class="list-style">
+                <li>Sessizlik veya içe kapanma</li>
+                <li>Sık ağlama, midesi ağrıyor bahanesiyle okula gitmek istememe</li>
+                <li>Akran ilişkilerinde çekingenlik</li>
+                <li>Derslerde dikkat dağınıklığı veya başarısızlık</li>
+                <li>Kurallara karşı direnç veya aşırı hareketlilik</li>
+                <li>Uyku-tutunma problemleri</li>
+            </ul>
+
+            <h3 class="section-title">Rehberlik Servisi Olarak Neler Yapıyoruz?</h3>
+            <p>Oryantasyon programları düzenliyor, yeni gelen öğrencilerin okulu ve sistemi tanımasını sağlıyoruz. Bireysel görüşmelerle uyum güçlüğü yaşayan öğrencilerimize destek veriyoruz.</p>
+
+            <h3 class="section-title">Velilere Öneriler</h3>
+            <ul class="list-style">
+                <li>Çocuğunuzun duygularını küçümsemeyin, empatik yaklaşın.</li>
+                <li>Kendi kaygılarınızı çocuğa yansıtmayın.</li>
+                <li>Okuldan döndüğünde onu sorgulamak yerine sade sorularla sohbet edin.</li>
+            </ul>
+
+            <div class="quote-box">
+                "Yeni Bir Ortama Alışmak Zaman Alabilir, Ama Her Adım Seni Daha Da Güçlendirir."
+            </div>
+        </main>
+
+    </div>
+
+</body>
+</html>
