@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeler | DataKent Koleji</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a2a6c;
+            --secondary: #b21f1f;
+            --accent: #fdbb2d;
+            --bg-page: #f8fbfd;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-page);
+        }
+
+        /* --- ÜST BANNER ALANI (Resimli Bölüm) --- */
+        .page-header-elit {
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            /* Fotoğraftaki gibi karartılmış bina görseli */
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('kampus-arka-plan.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .header-content h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .breadcrumb-elit {
+            font-size: 1rem;
+        }
+
+        .breadcrumb-elit a { color: #fff; text-decoration: none; }
+        .breadcrumb-elit span { color: var(--accent); margin: 0 10px; }
+
+        /* --- KAMPÜS KARTLARI BÖLÜMÜ --- */
+        .kampus-section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .kampus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            justify-content: center;
+        }
+
+        /* Kart Tasarımı */
+        .kampus-card {
+            background: var(--white);
+            border-radius: 30px; /* Fotoğraftaki gibi geniş kavisli */
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .kampus-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .image-wrapper {
+            position: relative;
+            height: 350px;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* "Kampüslerimiz" etiketi */
+        .badge-elit {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: var(--accent);
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .kampus-name {
+            padding: 25px;
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            .header-content h1 { font-size: 2rem; }
+            .kampus-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+   
+
+   <main class="kampus-section">
+        <div class="kampus-grid">
+            
+            <a href="TÜBİTAK-projelerimiz.html" class="kampus-card" style="text-decoration: none; display: block;">
+                <div class="image-wrapper">
+                    <span class="badge-elit"><i class="fas fa-bookmark"></i> Projeler</span>
+                    
+                </div>
+                <div class="kampus-name">TÜBİTAK Projelerimiz</div>
+            </a>
+
+            <a href="okul-ici-projelerimiz.html" class="kampus-card" style="text-decoration: none; display: block;">
+                <div class="image-wrapper">
+                    <span class="badge-elit"><i class="fas fa-bookmark"></i> Projeler</span>
+                </div>
+                <div class="kampus-name">Okul İçi Projelerimiz</div>          
+            </a>
+
+        </div>
+    </main>
+
+</body>
+</html>
