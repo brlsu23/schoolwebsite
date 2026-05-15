@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datakent PDR | DataKent Koleji</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #0b3c6d;
+            --gold: #c9a74d;
+            --bg-light: #f8fbfd;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0; padding: 0;
+            background-color: var(--bg-light);
+        }
+
+        /* ÜST BANNER */
+        .page-header-pdr {
+            height: 400px;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('okul-binasi.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .header-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        .breadcrumb-pdr {
+            margin-top: 15px;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .breadcrumb-pdr a { color: #fff; text-decoration: none; transition: 0.3s; }
+        .breadcrumb-pdr a:hover { color: var(--gold); }
+        .breadcrumb-pdr span { margin: 0 10px; color: var(--gold); }
+
+        /* GRID KONTEYNER */
+        .pdr-container {
+            max-width: 1250px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        .pdr-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 40px;
+        }
+
+        /* KART TASARIMI */
+        .pdr-card {
+            background: var(--white);
+            border-radius: 35px;
+            overflow: hidden;
+            text-decoration: none;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+            transition: 0.4s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pdr-card:hover { transform: translateY(-15px); box-shadow: 0 25px 50px rgba(11, 60, 109, 0.15); }
+
+        .image-box {
+            background: #f0f0f0;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            border-radius: 0 0 50% 50% / 0 0 15% 15%;
+        }
+
+        .image-box img { max-width: 180px; height: auto; }
+
+        .tag {
+            position: absolute;
+            top: 0; right: 35px;
+            background: var(--gold);
+            color: #fff;
+            padding: 10px 18px;
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 0 0 12px 12px;
+        }
+
+        .pdr-info { padding: 35px 25px; text-align: center; display: flex; align-items: center; justify-content: center; min-height: 100px; }
+        .pdr-info h3 { color: var(--primary-blue); font-size: 1.4rem; margin: 0; font-weight: 800; }
+
+        @media (max-width: 768px) { .pdr-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <section class="page-header-pdr">
+        <div class="header-content">
+            <h1>Datakent PDR</h1>
+            <nav class="breadcrumb-pdr">
+                <a href="index.html">Anasayfa</a> 
+                <span>»</span> 
+                <b>Datakent PDR</b>
+            </nav>
+        </div>
+    </section>
+
+    <div class="pdr-container">
+        <div class="pdr-grid">
+            
+            <a href="okul-uyum-sureci.html" class="pdr-card">
+                <div class="image-box">
+                    <span class="tag">Datakent PDR</span>
+                    <img src="data-kent-logo.png">
+                </div>
+                <div class="pdr-info"><h3>Okul Uyum Süreci</h3></div>
+            </a>
+
+            <a href="Sosyal-Becerileri-Gelistirmek.html" class="pdr-card">
+                <div class="image-box">
+                    <span class="tag">Datakent PDR</span>
+                    <img src="data-kent-logo.png">
+                </div>
+                <div class="pdr-info"><h3>Sosyal Becerileri Geliştirmek</h3></div>
+            </a>
+
+            <a href="Hedef-Belirleme.html" class="pdr-card">
+                <div class="image-box">
+                    <span class="tag">Datakent PDR</span>
+                    <img src="data-kent-logo.png">
+                </div>
+                <div class="pdr-info"><h3>Hedef Belirleme</h3></div>
+            </a>
+
+            <a href="stres-yonetimi.html" class="pdr-card">
+                <div class="image-box">
+                    <span class="tag">Datakent PDR</span>
+                    <img src="data-kent-logo.png">
+                </div>
+                <div class="pdr-info"><h3>Stres Yönetimi ve Öfke Kontrolü</h3></div>
+            </a>
+
+            <a href="sinir-koyma.html" class="pdr-card">
+                <div class="image-box">
+                    <span class="tag">Datakent PDR</span>
+                    <img src="data-kent-logo.png">
+                </div>
+                <div class="pdr-info"><h3>Sınır Koyma</h3></div>
+            </a>
+
+            <a href="mukemmeliyetcilik.html" class="pdr-card">
+                <div class="image-box">
+                    <span class="tag">Datakent PDR</span>
+                    <img src="data-kent-logo.png">
+                </div>
+                <div class="pdr-info"><h3>Mükemmeliyetçilik</h3></div>
+            </a>
+
+            <a href="zaman-yonetimi.html" class="pdr-card">
+                <div class="image-box">
+                    <span class="tag">Datakent PDR</span>
+                    <img src="data-kent-logo.png">
+                </div>
+                <div class="pdr-info"><h3>Zaman Yönetimi</h3></div>
+            </a>
+
+            <a href="mentorluk-sistemi.html" class="pdr-card">
+                <div class="image-box">
+                    <span class="tag">Datakent PDR</span>
+                    <img src="data-kent-logo.png">
+                </div>
+                <div class="pdr-info"><h3>Mentörlük Sistemi Nedir?</h3></div>
+            </a>
+
+            <a href="bireysel-etut.html" class="pdr-card">
+                <div class="image-box">
+                    <span class="tag">Datakent PDR</span>
+                    <img src="data-kent-logo.png">
+                </div>
+                <div class="pdr-info"><h3>Bireysel Etüt ve Kabin Yöntemi</h3></div>
+            </a>
+
+            <a href="olcme-degerlendirme.html" class="pdr-card">
+                <div class="image-box">
+                    <span class="tag">Datakent PDR</span>
+                    <img src="data-kent-logo.png">
+                </div>
+                <div class="pdr-info"><h3>Ölçme ve Değerlendirme Nedir?</h3></div>
+            </a>
+
+        </div>
+    </div>
+
+</body>
+</html>
