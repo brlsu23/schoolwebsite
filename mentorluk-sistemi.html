@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentörlük Sistemi Nedir? | DataKent Koleji</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0b3c6d;
+            --gold: #c9a74d;
+            --bg-page: #f4f7f9;
+            --white: #ffffff;
+            --text: #444;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0; padding: 0;
+            background-color: var(--bg-page);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        /* 1. ÜST BANNER (Breadcrumb Alanı) */
+        .page-header-pdr {
+            height: 400px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('okul-binasi.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .header-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .breadcrumb-pdr {
+            margin-top: 15px;
+            font-size: 1.1rem;
+        }
+
+        .breadcrumb-pdr a { color: #fff; text-decoration: none; }
+        .breadcrumb-pdr span { margin: 0 10px; color: var(--gold); }
+
+        /* 2. ANA KONTEYNER */
+        .main-container {
+            max-width: 1250px;
+            margin: -60px auto 80px;
+            display: flex;
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        /* SIDEBAR (Yan Menü) */
+        .sidebar-pdr {
+            flex: 0 0 350px;
+            background: var(--white);
+            padding: 45px 30px;
+            border-radius: 35px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+            height: fit-content;
+            position: sticky;
+            top: 40px;
+        }
+
+        .sidebar-pdr h3 {
+            color: var(--primary);
+            font-size: 24px;
+            margin: 0 0 10px 0;
+        }
+
+        .gold-line {
+            width: 50px;
+            height: 4px;
+            background: var(--gold);
+            margin-bottom: 35px;
+            border-radius: 2px;
+        }
+
+        .sidebar-pdr ul { list-style: none; padding: 0; margin: 0; }
+        .sidebar-pdr li { border-bottom: 1px solid #eee; }
+
+        .sidebar-pdr li a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 600;
+            padding: 18px 0;
+            display: flex;
+            align-items: center;
+            transition: 0.3s;
+        }
+
+        .sidebar-pdr li a i {
+            color: var(--gold);
+            margin-right: 15px;
+            font-size: 18px;
+        }
+
+        .sidebar-pdr li a.active { color: var(--primary); }
+        .sidebar-pdr li a:hover { transform: translateX(5px); color: var(--primary); }
+
+        /* İÇERİK ALANI */
+        .content-area {
+            flex: 1;
+            background: var(--white);
+            padding: 60px;
+            border-radius: 35px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.06);
+        }
+
+        .content-area h2 {
+            color: var(--primary);
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+
+        .content-area h4 {
+            color: var(--gold);
+            font-size: 1.2rem;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .section-title {
+            color: var(--primary);
+            border-left: 5px solid var(--gold);
+            padding-left: 15px;
+            margin: 40px 0 20px 0;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        /* TABLO TASARIMI */
+        .mentor-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .mentor-table th {
+            background-color: var(--primary);
+            color: white;
+            padding: 18px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .mentor-table td {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            background: #fff;
+            font-size: 0.95rem;
+        }
+
+        .mentor-table tr:last-child td { border-bottom: none; }
+        .mentor-table tr:nth-child(even) td { background: #f9fbfd; }
+
+        .list-style {
+            padding-left: 0;
+            margin-bottom: 30px;
+        }
+
+        .list-style li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+            position: relative;
+            list-style: none;
+            padding-left: 25px;
+        }
+
+        .list-style li::before {
+            content: "\f058";
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+        }
+
+        .quote-box {
+            background: #f9fbfd;
+            border: 1px dashed var(--gold);
+            padding: 35px;
+            border-radius: 25px;
+            text-align: center;
+            font-weight: 700;
+            color: var(--primary);
+            margin-top: 50px;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 992px) {
+            .main-container { flex-direction: column; }
+            .sidebar-pdr { flex: none; width: 100%; position: static; box-sizing: border-box; }
+            .content-area { padding: 30px; }
+            .mentor-table { display: block; overflow-x: auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="page-header-pdr">
+        <div class="header-content">
+            <h1>Mentörlük Sistemi</h1>
+            <nav class="breadcrumb-pdr">
+                <a href="index.html">Anasayfa</a> 
+                <span>»</span> 
+                <a href="pdr.html">Datakent PDR</a>
+                <span>»</span> 
+                <b>Mentörlük Sistemi</b>
+            </nav>
+        </div>
+    </section>
+
+    <div class="main-container">
+        
+        <aside class="sidebar-pdr">
+            <h3>Datakent PDR</h3>
+            <div class="gold-line"></div>
+            <ul>
+                <li><a href="okula-uyum-sureci.html"><i class="fas fa-long-arrow-alt-right"></i> Okula Uyum Süreci</a></li>
+                <li><a href="sosyal-beceriler.html"><i class="fas fa-long-arrow-alt-right"></i> Sosyal Becerileri Geliştirmek</a></li>
+                <li><a href="hedef-belirleme.html"><i class="fas fa-long-arrow-alt-right"></i> Hedef Belirleme</a></li>
+                <li><a href="stres-yonetimi.html"><i class="fas fa-long-arrow-alt-right"></i> Stres Yönetimi ve Öfke Kontrolü</a></li>
+                <li><a href="sinir-koyma.html"><i class="fas fa-long-arrow-alt-right"></i> Sınır Koyma</a></li>
+                <li><a href="mukemmeliyetcilik.html"><i class="fas fa-long-arrow-alt-right"></i> Mükemmeliyetçilik</a></li>
+                <li><a href="zaman-yonetimi.html"><i class="fas fa-long-arrow-alt-right"></i> Zaman Yönetimi</a></li>
+                <li><a href="mentorluk-sistemi.html" class="active"><i class="fas fa-long-arrow-alt-right"></i> Mentörlük Sistemi Nedir?</a></li>
+                <li><a href="bireysel-etut.html"><i class="fas fa-long-arrow-alt-right"></i> Bireysel Etüt ve Kabin Yöntemi</a></li>
+                <li><a href="olcme-degerlendirme.html"><i class="fas fa-long-arrow-alt-right"></i> Ölçme ve Değerlendirme Nedir?</a></li>
+            </ul>
+        </aside>
+
+        <main class="content-area">
+            <h2>Mentörlük Sistemi Nedir?</h2>
+            <h4>Öğrencinin Gelişimini Destekleyen Kılavuzluk Süreci</h4>
+
+            <p>Her öğrencinin bir potansiyeli vardır. Mentörlük, öğrencinin akademik, sosyal ve kişisel gelişimini birebir desteklemek amacıyla deneyimli bir öğretmenin ona rehberlik ettiği uzun süreli bir yol arkadaşlığı sürecidir.</p>
+
+            <h3 class="section-title">Mentörlük Ne Sağlar?</h3>
+            <ul class="list-style">
+                <li>Öğrencinin gerçekçi hedefler belirlemesini ve plan yapmasını sağlar.</li>
+                <li>Özgüvenini ve sorumluluk bilincini geliştirir.</li>
+                <li>Okul hayatındaki zorluklarla başa çıkmasını kolaylaştırır.</li>
+                <li>Aidiyet duygusunu artırarak öğretmen-öğrenci bağını güçlendirir.</li>
+            </ul>
+
+            <h3 class="section-title">Mentör Öğretmen Kimdir?</h3>
+            <p>Mentör öğretmen; öğrenciyi yargılamadan dinleyen, motivasyon desteği sağlayan ve gelişimini yakından takip eden kişidir. Sadece bir öğretmen değil, öğrencinin okul sürecindeki en yakın rehberlerinden biridir.</p>
+
+            <h3 class="section-title">Uygulama Süreci</h3>
+            <ul class="list-style">
+                <li><b>Eşleştirme:</b> Her öğrenci için en uygun öğretmen mentör olarak belirlenir.</li>
+                <li><b>Tanıma:</b> İlgi alanları, güçlü yönler ve ihtiyaçlar tespit edilir.</li>
+                <li><b>Düzenli Görüşmeler:</b> Periyodik olarak birebir gelişim takibi yapılır.</li>
+                <li><b>Veli İş Birliği:</b> Gelişim süreci düzenli olarak aile ile paylaşılır.</li>
+            </ul>
+
+            <h3 class="section-title">Destek Alanları</h3>
+            <table class="mentor-table">
+                <thead>
+                    <tr>
+                        <th>Alan</th>
+                        <th>Açıklama</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>Akademik Planlama</b></td>
+                        <td>Çalışma düzeni, sınav takibi, konu eksikleri ve ödev alışkanlıkları.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Kaygı ve Motivasyon</b></td>
+                        <td>Sınav dönemlerinde psikolojik destek ve motivasyon artırma çalışmaları.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Zaman Yönetimi</b></td>
+                        <td>Planlı yaşam alışkanlıkları ve verimli çalışma yöntemleri kazandırma.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Sosyal ve Duygusal</b></td>
+                        <td>Arkadaş ilişkileri, iletişim becerileri ve özgüven gelişimi.</td>
+                    </tr>
+                    <tr>
+                        <td><b>Kariyer Farkındalığı</b></td>
+                        <td>Gelecek hedefleri oluşturma ve meslekleri yakından tanıma.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="section-title">Veliler İçin Notlar</h3>
+            <p>Sistemin verimli işlemesi için veli-mentör-öğrenci üçgeni çok kritiktir. Velilerimizin mentör öğretmenle açık iletişimde olması, öğrencinin yaşadığı akademik veya sosyal zorlukların erken fark edilmesini sağlar.</p>
+
+            <div class="quote-box">
+                "Her Öğrenci Değerlidir.. Bu Sistemle Öğrenciler Sadece Başarılı Değil, Kendini Tanıyan Bireyler Olarak Yetişir."
+            </div>
+        </main>
+    </div>
+</body>
+</html>
