@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sıkça Sorulan Sorular | DataKent Koleji</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0b3c6d;
+            --gold: #c9a74d;
+            --bg-page: #f8fbfd;
+            --white: #ffffff;
+            --text: #1a2b3c;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0; padding: 0;
+            background-color: var(--bg-page);
+            color: var(--text);
+        }
+
+        /* 1. ÜST BANNER (Görseldeki gibi) */
+        .page-header-sss {
+            height: 400px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('okul-binasi.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .header-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin: 0;
+        }
+
+        .breadcrumb-sss {
+            margin-top: 15px;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .breadcrumb-sss a { color: #fff; text-decoration: none; }
+        .breadcrumb-sss span { margin: 0 10px; color: #fff; }
+
+        /* 2. S.S.S KONTEYNER */
+        .sss-container {
+            max-width: 1000px;
+            margin: 60px auto 100px;
+            padding: 0 20px;
+        }
+
+        .sss-item {
+            background: var(--white);
+            margin-bottom: 20px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        /* Soru Başlığı */
+        .sss-question {
+            padding: 25px 30px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .sss-question i.q-icon {
+            background: var(--primary);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 18px;
+        }
+
+        .sss-question h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary);
+            flex: 1;
+        }
+
+        .sss-question i.arrow {
+            color: var(--primary);
+            transition: 0.3s;
+        }
+
+        /* Cevap Alanı */
+        .sss-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: 0.4s ease-out;
+            background: #fff;
+            padding: 0 30px 0 90px; /* İkonun hizasından başlaması için */
+        }
+
+        .sss-answer p {
+            padding-bottom: 25px;
+            margin: 0;
+            line-height: 1.8;
+            color: #555;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 20px;
+        }
+
+        /* Aktif Durum */
+        .sss-item.active {
+            box-shadow: 0 15px 40px rgba(11, 60, 109, 0.1);
+        }
+
+        .sss-item.active .sss-answer {
+            max-height: 500px;
+        }
+
+        .sss-item.active .arrow {
+            transform: rotate(180px);
+        }
+
+        @media (max-width: 768px) {
+            .header-content h1 { font-size: 2.2rem; }
+            .sss-question { padding: 20px; }
+            .sss-answer { padding: 0 20px 0 80px; }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="page-header-sss">
+        <div class="header-content">
+            <h1>Sıkça Sorulan Sorular</h1>
+            <nav class="breadcrumb-sss">
+                <a href="index.html">Anasayfa</a> 
+                <span>»</span> 
+                <b>Sıkça Sorulan Sorular</b>
+            </nav>
+        </div>
+    </section>
+
+    <div class="sss-container">
+
+        <div class="sss-item">
+            <div class="sss-question">
+                <i class="fas fa-question q-icon"></i>
+                <h3>Okulunuzun eğitim modeli nedir?</h3>
+                <i class="fas fa-chevron-down arrow"></i>
+            </div>
+            <div class="sss-answer">
+                <p>Okulumuz; Montessori, Waldorf ve çağdaş tedrisat sistemlerinin güçlü yönlerini bir araya getiren, öğrencinin bireysel öğrenme biçimine ve potansiyeline saygı duyan bir eğitim yaklaşımına sahiptir. Böylece hem akademik hem de sosyal beceriler dengeli şekilde gelişir.</p>
+            </div>
+        </div>
+
+        <div class="sss-item">
+            <div class="sss-question">
+                <i class="fas fa-question q-icon"></i>
+                <h3>Öğrenciler hangi yaş grubundan itibaren kabul ediliyor?</h3>
+                <i class="fas fa-chevron-down arrow"></i>
+            </div>
+            <div class="sss-answer">
+                <p>Okulumuzda okul öncesi (anaokulu) kademesinden itibaren eğitim verilmektedir. Detaylı yaş grupları ve kontenjan bilgisi için halkla ilişkiler birimimizle iletişime geçebilirsiniz.</p>
+            </div>
+        </div>
+
+        <div class="sss-item">
+            <div class="sss-question">
+                <i class="fas fa-question q-icon"></i>
+                <h3>Sınıf mevcutlarınız kaç kişidir?</h3>
+                <i class="fas fa-chevron-down arrow"></i>
+            </div>
+            <div class="sss-answer">
+                <p>Eğitim kalitemizi korumak adına sınıf mevcutlarımızı butik yapıda tutuyoruz. Her kademe için belirlenmiş ideal öğrenci sayısı ile birebir takip imkanı sağlıyoruz.</p>
+            </div>
+        </div>
+
+        <div class="sss-item">
+            <div class="sss-question">
+                <i class="fas fa-question q-icon"></i>
+                <h3>Eğitim diliniz nedir?</h3>
+                <i class="fas fa-chevron-down arrow"></i>
+            </div>
+            <div class="sss-answer">
+                <p>Ana eğitim dilimiz Türkçe olmakla birlikte, tüm kademelerde yoğunlaştırılmış İngilizce programı ve ikinci yabancı dil seçenekleri sunulmaktadır.</p>
+            </div>
+        </div>
+
+        <div class="sss-item">
+            <div class="sss-question">
+                <i class="fas fa-question q-icon"></i>
+                <h3>Okulunuzda hangi sosyal ve sanatsal faaliyetler var?</h3>
+                <i class="fas fa-chevron-down arrow"></i>
+            </div>
+            <div class="sss-answer">
+                <p>Kulüp çalışmalarımız kapsamında spor, müzik, görsel sanatlar, robotik kodlama ve drama gibi geniş bir yelpazede sosyal gelişim alanları sunuyoruz.</p>
+            </div>
+        </div>
+
+        <div class="sss-item">
+            <div class="sss-question">
+                <i class="fas fa-question q-icon"></i>
+                <h3>Yemek ve beslenme hizmetleriniz nasıl?</h3>
+                <i class="fas fa-chevron-down arrow"></i>
+            </div>
+            <div class="sss-answer">
+                <p>Öğrencilerimize uzman diyetisyenler tarafından onaylanmış, taze ve sağlıklı malzemelerle hazırlanan öğünler sunuyoruz.</p>
+            </div>
+        </div>
+
+        <div class="sss-item">
+            <div class="sss-question">
+                <i class="fas fa-question q-icon"></i>
+                <h3>Veli iletişimini nasıl sağlıyorsunuz?</h3>
+                <i class="fas fa-chevron-down arrow"></i>
+            </div>
+            <div class="sss-answer">
+                <p>Okul yönetim sistemimiz, mobil uygulamamız ve düzenli veli toplantılarımız ile şeffaf ve sürekli bir iletişim döngüsü sağlıyoruz.</p>
+            </div>
+        </div>
+
+        <div class="sss-item">
+            <div class="sss-question">
+                <i class="fas fa-question q-icon"></i>
+                <h3>Neden Datakent Kolejleri?</h3>
+                <i class="fas fa-chevron-down arrow"></i>
+            </div>
+            <div class="sss-answer">
+                <p>Geleceğin dünyasına hazır, akademik donanımı yüksek, etik değerlere sahip ve mutlu bireyler yetiştirdiğimiz için Datakent Kolejleri fark yaratıyor.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        const sssItems = document.querySelectorAll('.sss-item');
+        
+        sssItems.forEach(item => {
+            const question = item.querySelector('.sss-question');
+            question.addEventListener('click', () => {
+                // Diğer açık olanları kapat (Opsiyonel)
+                sssItems.forEach(otherItem => {
+                    if (otherItem !== item) otherItem.classList.remove('active');
+                });
+                // Tıklananı aç/kapat
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
